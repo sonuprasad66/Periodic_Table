@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+</head>
+<style>
+
+    #box{
+        height: 150px; width: 150px; border: 2px solid black;
+        position: relative;
+        left: 260px; bottom: 400px; background-color: rgb(14, 107, 14);
+    }
+    #p1{
+        text-align: right; padding-right: 10px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #p2{
+        padding-left: 10px; margin-top: -20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1{
+        padding-left: 10px; font-size: 50px; margin-top: -10px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h2{
+        text-align: center; 
+    }
+  #main{
+      margin: auto;
+      display: grid; width: 90%; 
+      grid-template-columns: repeat(18, 1fr);
+      grid-template-rows: 50px  50px 50px 50px 50px 50px 50px;
+     
+      gap: 10px;
+      grid-template-areas: 
+      "b1 . . . . . . . . . . . . . . . . b2"
+      "b3 b4 . . . . . . . . . . b5 b6 b7 b8 b9 b10"
+      "b11 b12 . . . . . . . . . . b13 b14 b15 b16 b17 b18"
+      "b19 b20 . b21 b22 b23 b24 b25 b26 b27 b28 b29 b30 b31 b32 b33 b34 b35"
+      "b36 b37 . b38 b39 b40 b41 b42 b43 b44 b45 b46 b47 b48 b49 b50 b51 b52"
+      "b53 b54 b55 b56 b57 b58 b59 b60 b61 b62 b63 b64 b65 b66 b67 b68 b69 b70"
+      "b71 b72 b73 b74 b75 b76 b77 b78 b79 b80 b81 b82 b83 b84 b85 b86 b87 b88"
+
+  }
+  #main>div:nth-child(1){
+      grid-area: b1; color: aliceblue; display: flex; align-items: center;
+      justify-content: center; font-size: 20px;
+      background-color: rgb(27, 2, 27)
+
+  }
+  #main>div:nth-child(2){
+      grid-area: b2;
+      background-color: rgb(180, 180, 6);
+  }
+  #main>div:nth-child(3){
+      grid-area: b3;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(4){
+      grid-area: b4;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(5){
+      grid-area: b5;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(6){
+      grid-area: b6;
+      background-color: green;
+  }
+  #main>div:nth-child(7){
+      grid-area: b7;
+      background-color: green;
+  }
+  #main>div:nth-child(8){
+      grid-area: b8;
+      background-color: green;
+  }
+  #main>div:nth-child(9){
+      grid-area: b9;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(10){
+      grid-area: b10;
+      background-color: rgb(180, 180, 6);
+  }
+
+  #main>div:nth-child(11){
+      grid-area: b11;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(12){
+      grid-area: b12;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(13){
+      grid-area: b13;
+      background-color: orangered;
+  }
+  #main>div:nth-child(14){
+      grid-area: b14;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(15){
+      grid-area: b15;
+      background-color: green;
+  }
+  #main>div:nth-child(16){
+      grid-area: b16;
+      background-color: green;
+  }
+  #main>div:nth-child(17){
+      grid-area: b17;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(18){
+      grid-area: b18;
+      background-color: rgb(180, 180, 6);
+  }
+  #main>div:nth-child(19){
+      grid-area: b19;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(20){
+      grid-area: b20;
+      background-color: rgb(214, 31, 92)
+  }
+
+  #main>div:nth-child(21){
+      grid-area: b21;
+      background-color: blue;
+  }
+  #main>div:nth-child(22){
+      grid-area: b22;
+      background-color: blue;
+  }
+  #main>div:nth-child(23){
+      grid-area: b23;
+      background-color: blue;
+  }
+  #main>div:nth-child(24){
+      grid-area: b24;
+      background-color: blue;
+  }
+  #main>div:nth-child(25){
+      grid-area: b25;
+      background-color: blue;
+  }
+  #main>div:nth-child(26){
+      grid-area: b26;
+      background-color: blue;
+  }
+  #main>div:nth-child(27){
+      grid-area: b27;
+      background-color: blue;
+  }
+  #main>div:nth-child(28){
+      grid-area: b28;
+      background-color: blue;
+  }
+  #main>div:nth-child(29){
+      grid-area: b29;
+      background-color: blue;
+  }
+  #main>div:nth-child(30){
+      grid-area: b30;
+      background-color: orangered;
+  }
+
+  #main>div:nth-child(31){
+      grid-area: b31;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(32){
+      grid-area: b32;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(33){
+      grid-area: b33;
+      background-color: green;
+  }
+  #main>div:nth-child(34){
+      grid-area: b34;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(35){
+      grid-area: b35;
+      background-color: rgb(180, 180, 6);
+  }
+  #main>div:nth-child(36){
+      grid-area: b36;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(37){
+      grid-area: b37;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(38){
+      grid-area: b38;
+      background-color: blue;
+  }
+  #main>div:nth-child(39){
+      grid-area: b39;
+      background-color: blue;
+  }
+  #main>div:nth-child(40){
+      grid-area: b40;
+      background-color: blue;
+  }
+
+  #main>div:nth-child(41){
+      grid-area: b41;
+      background-color: blue;
+  }
+  #main>div:nth-child(42){
+      grid-area: b42;
+      background-color: blue;
+  }
+  #main>div:nth-child(43){
+      grid-area: b43;
+      background-color: blue;
+  }
+  #main>div:nth-child(44){
+      grid-area: b44;
+      background-color: blue;
+  }
+  #main>div:nth-child(45){
+      grid-area: b45;
+      background-color: blue;
+  }
+  #main>div:nth-child(46){
+      grid-area: b46;
+      background-color: blue;
+  }
+  #main>div:nth-child(47){
+      grid-area: b47;
+      background-color: orangered;
+  }
+  #main>div:nth-child(48){
+      grid-area: b48;
+      background-color: orangered;
+  }
+  #main>div:nth-child(49){
+      grid-area: b49;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(50){
+      grid-area: b50;
+      background-color: rgb(71, 33, 107);
+  }
+
+  #main>div:nth-child(51){
+      grid-area: b51;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(52){
+      grid-area: b52;
+      background-color: rgb(180, 180, 6);
+  }
+  #main>div:nth-child(53){
+      grid-area: b53;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(54){
+      grid-area: b54;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(55){
+      grid-area: b55;
+      border: 5px solid black;
+  }
+  #main>div:nth-child(56){
+      grid-area: b56;
+    background-color: blue;
+  }
+  #main>div:nth-child(57){
+      grid-area: b57;
+      background-color: blue;
+  }
+  #main>div:nth-child(58){
+      grid-area: b58;
+      background-color: blue;
+  }
+  #main>div:nth-child(59){
+      grid-area: b59;
+      background-color:blue;
+  }
+  #main>div:nth-child(60){
+      grid-area: b60;
+      background-color: blue;
+  }
+
+  #main>div:nth-child(61){
+      grid-area: b61;
+      background-color:blue;
+  }
+  #main>div:nth-child(62){
+      grid-area: b62;
+      background-color: blue;
+  }
+  #main>div:nth-child(63){
+      grid-area: b63;
+      background-color: blue;
+  }
+  #main>div:nth-child(64){
+      grid-area: b64;
+      background-color: blue;
+  }
+  #main>div:nth-child(65){
+      grid-area: b65;
+      background-color:orangered;
+  }
+  #main>div:nth-child(66){
+      grid-area: b66;
+      background-color: orangered;
+  }
+  #main>div:nth-child(67){
+      grid-area: b67;
+      background-color: orangered;
+  }
+  #main>div:nth-child(68){
+      grid-area: b68;
+      background-color: rgb(71, 33, 107);
+  }
+  #main>div:nth-child(69){
+      grid-area: b69;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(70){
+      grid-area: b70;
+      background-color: rgb(180, 180, 6);
+  }
+
+  #main>div:nth-child(71){
+      grid-area: b71;
+      background-color: rgb(21, 85, 21)
+  }
+  #main>div:nth-child(72){
+      grid-area: b72;
+      background-color: rgb(214, 31, 92)
+  }
+  #main>div:nth-child(73){
+      grid-area: b73;
+      border: 5px solid black;
+  }
+  #main>div:nth-child(74){
+      grid-area: b74;
+     background-color: blue;
+  }
+  #main>div:nth-child(75){
+      grid-area: b75;
+      background-color: blue;
+  }
+  #main>div:nth-child(76){
+      grid-area: b76;
+      background-color: blue;
+  }
+  #main>div:nth-child(77){
+      grid-area: b77;
+      background-color:blue;
+  }
+  #main>div:nth-child(78){
+      grid-area: b78;
+      background-color: blue;
+  }
+  #main>div:nth-child(79){
+      grid-area: b79;
+      background-color: blue;
+  }
+  #main>div:nth-child(80){
+      grid-area: b80;
+      background-color: blue;
+  }
+
+  #main>div:nth-child(81){
+      grid-area: b81;
+      background-color: blue;
+  }
+  #main>div:nth-child(82){
+      grid-area: b82;
+      background-color: blue;
+  }
+  #main>div:nth-child(83){
+      grid-area: b83;
+      background-color: rgb(36, 33, 33);
+  }
+  #main>div:nth-child(84){
+      grid-area: b84;
+      background-color: rgb(36, 33, 33);
+  }
+  #main>div:nth-child(85){
+      grid-area: b85;
+      background-color: rgb(36, 33, 33);
+  }
+  #main>div:nth-child(86){
+      grid-area: b86;
+      background-color:rgb(36, 33, 33);
+  }
+  #main>div:nth-child(87){
+      grid-area: b87;
+      background-color: rgb(36, 33, 33);
+  }
+  #main>div:nth-child(88){
+      grid-area: b88;
+      background-color: rgb(36, 33, 33);
+  }
+ 
+
+</style>
+
+<body>
+    <h2>THE PERIODIC TABLE OF ELEMENTS</h2>
+
+    <div id="main">
+
+        <div>H</div>
+        <div></div>
+        <div></div>
+        <div>4</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+    <div id="box">
+        <p id="p1">14</p>
+        <h1>Si</h1>
+        <p id="p2">Silicon</p>
+    </div>
+    
+
+    
+</body>
+</html>
